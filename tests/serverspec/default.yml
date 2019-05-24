@@ -1,0 +1,6 @@
+---
+- hosts: localhost
+  roles:
+    - ansible-role-freebsd_pkg_repo
+  vars:
+    freebsd_pkg_repo_config: ""

@@ -1,0 +1,3 @@
+---
+__freebsd_pkg_repo_db_dir: /var/db/freebsd_pkg_repo
+__freebsd_pkg_repo_conf_dir: /usr/local/etc/freebsd_pkg_repo

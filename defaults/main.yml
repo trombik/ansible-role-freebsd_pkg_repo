@@ -1,0 +1,9 @@
+---
+freebsd_pkg_repo_user: freebsd_pkg_repo
+freebsd_pkg_repo_group: freebsd_pkg_repo
+freebsd_pkg_repo_log_dir: /var/log/freebsd_pkg_repo
+freebsd_pkg_repo_db_dir: "{{ __freebsd_pkg_repo_db_dir }}"
+freebsd_pkg_repo_service: freebsd_pkg_repo
+freebsd_pkg_repo_conf_dir: "{{ __freebsd_pkg_repo_conf_dir }}"
+freebsd_pkg_repo_conf_file: "{{ __freebsd_pkg_repo_conf_dir }}/freebsd_pkg_repo.conf"
+freebsd_pkg_repo_flags: ""
