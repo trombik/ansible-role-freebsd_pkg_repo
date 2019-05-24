@@ -1,6 +1,6 @@
 # ansible-role-freebsd_pkg_repo
 
-A brief description of the role goes here.
+Enable or disable FreeBSD package repositories.
 
 # Requirements
 
@@ -8,9 +8,17 @@ None
 
 # Role Variables
 
-| variable | description | default |
+| Variable | Description | Default |
 |----------|-------------|---------|
+| `freebsd_pkg_repo_dir` | | `/usr/local/etc/pkg/repos` |
+| `freebsd_pkg_repo` | | `{}` |
 
+
+## FreeBSD
+
+| Variable | Default |
+|----------|---------|
+| `__freebsd_pkg_repo_conf_dir` | `/usr/local/etc/freebsd_pkg_repo` |
 
 # Dependencies
 
@@ -19,6 +27,25 @@ None
 # Example Playbook
 
 ```yaml
+---
+- hosts: localhost
+  roles:
+    - ansible-role-freebsd_pkg_repo
+  vars:
+    freebsd_pkg_repo:
+      # disable the default package repository
+      FreeBSD:
+        enabled: "false"
+        state: present
+      # enable newer package repository
+      FreeBSD_latest:
+        enabled: "true"
+        state: present
+        url: pkg+http://pkg.FreeBSD.org/${ABI}/latest
+        mirror_type: srv
+        signature_type: fingerprints
+        fingerprints: /usr/share/keys/pkg
+        priority: 100
 ```
 
 # License
