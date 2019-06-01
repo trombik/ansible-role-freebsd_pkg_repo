@@ -10,7 +10,7 @@ None
 
 | Variable | Description | Default |
 |----------|-------------|---------|
-| `freebsd_pkg_repo_dir` | | `/usr/local/etc/pkg/repos` |
+| `freebsd_pkg_repo_dir` | path to the repository configuration directory | `/usr/local/etc/pkg/repos` |
 | `freebsd_pkg_repo` | | `{}` |
 
 
@@ -41,7 +41,7 @@ None
       FreeBSD_latest:
         enabled: "true"
         state: present
-        url: pkg+http://pkg.FreeBSD.org/${ABI}/latest
+        url: pkg+https://pkg.FreeBSD.org/${ABI}/latest
         mirror_type: srv
         signature_type: fingerprints
         fingerprints: /usr/share/keys/pkg
