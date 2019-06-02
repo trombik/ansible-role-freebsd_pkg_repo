@@ -1,7 +1,7 @@
 {{ item.key }}: {
 {% for k, v in item.value | dictsort %}
 {% if k != "state" %}
-{% if v == "true" or v == "false" or v | string | match("\d+$") %}
+{% if v == "true" or v == "false" or v | string is match("\d+$") %}
   {{ k }}: {{ v }},
 {% else %}
   {{ k }}: "{{ v }}",
