@@ -1,3 +1,11 @@
+## Release 1.0.3
+
+* a824396 bugfix: bump box versions, add ansible.cfg
+* 60a1031 bugfix: QA
+* 2641c70 bugfix: update gems
+* 6dbcc2b bugfix: update gems
+* b58019b bugfix: QA
+
 ## Release 1.0.2
 
 * d00ea6c QA
