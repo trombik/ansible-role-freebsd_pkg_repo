@@ -1,3 +1,8 @@
+## Release 1.0.4
+
+* 1838d68 bugfix: update .kitchen.yml
+* 808f4d0 bugfix: update gems
+
 ## Release 1.0.3
 
 * a824396 bugfix: bump box versions, add ansible.cfg
